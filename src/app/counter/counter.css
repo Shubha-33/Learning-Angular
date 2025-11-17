@@ -1,0 +1,47 @@
+.bg-green{
+    background-color: green;
+}
+.bg-black{
+    background-color: black;
+}
+.bg-red{
+    background-color: red;
+}
+.btn{
+    color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 80px;
+    margin: 10px;
+    padding: 10px;
+    /* text-align: center; */
+     display: flex;
+  align-items: center;     /* vertical center */
+  justify-content: center;
+    cursor: pointer;
+border: 2px solid black;
+}
+
+.counter-box
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.counter-num{
+    height: 60px;
+    background-color: lightgrey;
+    width: 200px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+}
+.btn:hover{
+    
+    border: 2px solid white;
+    
+}

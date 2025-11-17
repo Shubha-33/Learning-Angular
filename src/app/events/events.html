@@ -1,0 +1,6 @@
+<div class="btn" style="background-color: aqua;" (click)="handleClick($event)">On click event </div>
+<div class="btn" style="background-color:beige"  (mouseenter)="handleClick($event)">Mouse Enter Event </div>
+<div  class="btn" style="background-color: rgb(199, 159, 226);" (mouseleave)="handleClick($event)">Mouse Leave Event </div>
+<div  class="btn" style="background-color: rgb(74, 53, 78);">Focus Event Input<input type="text"  (focus)="handleClickInput($event)">  </div>
+<div class="btn" style="background-color: rgb(6, 129, 88);">Blur Event <input type="text"  (blur)="handleClickInput($event)"></div>
+<div  class="btn" style="background-color: rgb(200, 235, 107);">Input<input type="text"  (input)="handleClickInput($event)"> </div>

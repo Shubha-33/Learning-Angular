@@ -1,0 +1,12 @@
+<h2> Counter </h2>
+<div
+ class="counter-num">{{count}}</div>
+<div class="counter-box">
+  <!-- <button class="btn bg-green" (click)="increment()">Increment</button>
+  <button class="btn bg-black" (click)="reset()">Reset</button>
+  <button class="btn bg-red" (click)="decrement()">Decrement</button> -->
+
+  <button class="btn bg-green" (click)="counterHandler('plus')">Increment</button>
+  <button class="btn bg-black" (click)="counterHandler('reset')">Reset</button>
+  <button class="btn bg-red" (click)="counterHandler('minus')">Decrement</button> 
+</div>
