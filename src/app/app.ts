@@ -4,9 +4,10 @@ import { single } from 'rxjs';
 
 import { Counter } from './counter/counter';
 import { Events } from './events/events';
+import { ControlFlow}  from './control-flow/control-flow'; 
 @Component({
   selector: 'app-root',
-  imports: [Counter, Events],
+  imports: [Counter, Events,ControlFlow],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -1,0 +1,60 @@
+<p>control-flow works!</p>
+<p>If and Else </p>
+<button (click)="colorChange('Red')">Red</button>
+<button (click)="colorChange('Blue')">Blue</button>
+<button (click)="colorChange('Yellow')">Yellow</button>
+<button (click)="colorChange('Other')">Other</button>
+
+@if (color=='Red'){
+<div style="background-color: {{ color }}; width: 200px; height: 50px; color:white">Red Color</div>
+
+}
+@else if (color=='Blue'){
+<div style="background-color: {{ color }}; width: 200px; height: 50px; color:white">Blue Color</div>
+
+}
+@else if (color=='Yellow'){
+<div style="background-color: {{ color }}; width: 200px; height: 50px; color:white">Yellow Color</div>
+
+}
+@else{
+    <div style="background-color:black; width: 200px; height: 50px; color:white">Other Color</div>
+
+}
+
+
+<hr>
+<P>Switch Statment </P>
+
+@switch (color){
+    @case ('Red'){
+    <h1 style="background-color: red;">RED color</h1>
+    
+    }
+    @case ('Blue'){
+    <h1 style="background-color: blue;">Blue color</h1>
+   
+    }
+    @case ('Yellow'){
+    <h1 style="background-color: yellow;">Yellow color</h1>
+  
+ }
+    @default{
+    <h1 style="background-color: black; color:white">Other Color</h1>
+  }
+}
+
+
+---------------------------For loop------------------
+<hr>
+<p>For loop</p>
+@for (name of Name;track name){
+    <h3>{{name}}</h3>
+}
+<hr>
+@for (student of Student;track student.name;let index=$index){
+   <p><span>{{index}} </span><br>
+    <span>{{student.name}}</span><br>
+    <span>{{student.age}}</span></p> 
+
+}
