@@ -5,9 +5,10 @@ import { single } from 'rxjs';
 import { Counter } from './counter/counter';
 import { Events } from './events/events';
 import { ControlFlow}  from './control-flow/control-flow'; 
+import{ SignalConcept} from './signal-concept/signal-concept';
 @Component({
   selector: 'app-root',
-  imports: [Counter, Events,ControlFlow],
+  imports: [Counter, Events,ControlFlow,SignalConcept ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
