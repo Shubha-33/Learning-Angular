@@ -1,0 +1,21 @@
+<p style="text-align: center; margin-top: 60px;font-size: larger;">Todo List</p>
+
+
+<div class="addtask" style="text-align: center; margin-top: 60px;">
+Task &nbsp;
+<input type="text" placeholder="Enter Your task "[(ngModel)]="task">
+&nbsp;
+<button (click)="addTask(task)">{{edditTask ?"Save Task":"Add Task"}}</button></div>
+
+<div class="show class" style="text-align: center; margin-top: 60px;">
+@for (item of taskList; track item.id) {
+<ul>
+
+    {{ item.id }} &nbsp; {{ item.task }}
+    &nbsp; <button (click)="deleteTask(item.id)">Delete</button>
+    &nbsp; <button (click)="updateTask(item.id,item.task)">Update</button>
+
+</ul>
+
+}
+</div>

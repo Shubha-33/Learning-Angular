@@ -4,3 +4,8 @@
 <div  class="btn" style="background-color: rgb(74, 53, 78);">Focus Event Input<input type="text"  (focus)="handleClickInput($event)">  </div>
 <div class="btn" style="background-color: rgb(6, 129, 88);">Blur Event <input type="text"  (blur)="handleClickInput($event)"></div>
 <div  class="btn" style="background-color: rgb(200, 235, 107);">Input<input type="text"  (input)="handleClickInput($event)"> </div>
+
+
+<!-- ---------------------------------------------Ng for  -->
+  <input type="text"  [(ngModel)]="userName"  id="">
+  <p>{{userName}}</p>
