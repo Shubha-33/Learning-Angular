@@ -7,9 +7,10 @@ import { Events } from './events/events';
 import { ControlFlow}  from './control-flow/control-flow'; 
 import{ SignalConcept} from './signal-concept/signal-concept';
 import { TodoList } from './todo-list/todo-list';
+import {Directives} from './directives/directives';
 @Component({
   selector: 'app-root',
-  imports: [Counter, Events,ControlFlow,SignalConcept ,TodoList],
+  imports: [Counter, Events,ControlFlow,SignalConcept ,TodoList,Directives],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

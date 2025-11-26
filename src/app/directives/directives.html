@@ -1,0 +1,32 @@
+<p>directives works!</p>
+<p>Directives for ngif directives</p>
+
+<hr>
+<p *ngIf="!login">Please Sign UP </p>
+<p *ngIf="login">Please Login </p>
+<button (click)="toggleLogin()">{{login ?'Login':'SignUp'}}</button>
+
+<hr>
+
+<p>Directives for ngFor directives</p>
+<div *ngFor="let student of students; track by student">
+    <h3>Name :{{student.name}}</h3>
+    <p>Age : {{student.age}}</p>
+      <p>Course : {{student.course.name}} and duration  - {{student.course.duration}}</p>
+</div>
+
+<hr>
+
+<p>Directives switch case</p>
+
+<button (click)="toggleColor('blue')">blue</button>
+<button (click)="toggleColor('green')">Green</button>
+<button (click)="toggleColor('black')">black</button>
+<button (click)="toggleColor('red')">No</button>
+
+<div [ngSwitch]="color">
+<h1 *ngSwitchCase="'black'" style="background-color: black; color: white;">{{color}}</h1>
+<h1 *ngSwitchCase="'green'" style="background-color: green; color: white;">{{color}}</h1>
+<h1 *ngSwitchCase="'blue'" style="background-color: blue;color: white;">{{color}}</h1>
+ <h1 *ngSwitchDefault style="background-color: rgb(231, 231, 238);color: #0c0c0c;">{{color}}</h1>
+</div>
