@@ -1,0 +1,8 @@
+<nav>
+    <h1>Logo</h1>
+        <router-outlet>
+        <a routerLinkActive="active" routerLink="/login">Login</a>
+        <a  routerLinkActive="active" routerLink="/signup">SignUp</a>
+        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"  routerLink="/">Home</a>
+        </router-outlet>
+</nav>

@@ -8,9 +8,11 @@ import { ControlFlow}  from './control-flow/control-flow';
 import{ SignalConcept} from './signal-concept/signal-concept';
 import { TodoList } from './todo-list/todo-list';
 import {Directives} from './directives/directives';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { Header } from './header/header';
 @Component({
   selector: 'app-root',
-  imports: [Counter, Events,ControlFlow,SignalConcept ,TodoList,Directives],
+  imports: [Header],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
