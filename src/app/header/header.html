@@ -1,8 +1,12 @@
 <nav>
-    <h1>Logo</h1>
-        <router-outlet>
-        <a routerLinkActive="active" routerLink="/login">Login</a>
-        <a  routerLinkActive="active" routerLink="/signup">SignUp</a>
-        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"  routerLink="/">Home</a>
-        </router-outlet>
+  <h1>Logo</h1>
+
+  <div class="links">
+    <a routerLinkActive="active" routerLink="/login">Login</a>
+    <a routerLinkActive="active" routerLink="/aboutus">About Us</a>
+    <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">Home</a>
+  </div>
 </nav>
+
+<!-- Routed pages will load here, NOT inside the navbar -->
+<router-outlet></router-outlet>

@@ -1,11 +1,31 @@
-nav{
+/* .links{
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
+} */
+nav{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: antiquewhite;
 }
-.link a{
-   margin: 1 10px;
-   text-decoration: none;
+
+.links {
+  display: flex;
+  gap: 30px;
+  
 }
-.active{
-    background-color: red;
+.links a{
+    text-decoration: none;
+    font-weight: normal;
+    color: inherit;
 }
+.links a:hover{
+    font-size: 18px;
+    font-weight: bold;
+
+}
+.links a.active {
+  font-weight: bold;
+  border-bottom: 2px solid black;  /* optional active indicator */
+}
+

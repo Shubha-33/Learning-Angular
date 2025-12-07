@@ -1,2 +1,12 @@
-<h2>login works!</h2>
-<p> Click it </p> <button (click)="onClick()"> Click Me </button>
+<h2>login</h2>
+<form>
+  <input type="text" placeholder="Enter Your Name" [formControl]="name">
+  <br><br>
+
+  <input type="password" placeholder="Enter Your password" [formControl]="password">
+  <br><br>
+
+  <button type="button" (click)="display()">Submit</button>
+</form>
+
+<!-- <h3>Name: {{ name.value }}</h3> -->
