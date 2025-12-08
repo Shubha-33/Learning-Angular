@@ -7,6 +7,7 @@ import { PageNotFound } from './page-not-found/page-not-found';
 import { AboutUs } from './about-us/about-us';
 import { Profile } from './profile/profile';
 import { User } from './user/user';
+import { SignUp } from './signUp/sign-up';
 
 export const routes: Routes = [
    {path:'directives',component:Directives},
@@ -15,6 +16,7 @@ export const routes: Routes = [
     {path:'login',component:Login},
   { path: 'aboutus', component: AboutUs },
     { path: 'profile', component: Profile},
+    { path: 'signUp', component: SignUp},
     {path:'user/:id/:name',component:User},
 
        {path:'**',component:PageNotFound}, // this is called wildcard route if any route does not match then we have to show this component

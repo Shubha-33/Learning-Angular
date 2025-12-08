@@ -18,6 +18,8 @@ export class Login {
   // }
  name=new FormControl();
  password=new FormControl();
+//  name=new FormControl('mama');  // default value
+//  password=new FormControl('1234'); // default value
  display(){
   console.log(this.name.value);
  }

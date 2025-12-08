@@ -1,0 +1,15 @@
+<p>Sign In Please </p>
+<form [formGroup]="SignUp">
+<input type="text" placeholder="Enter Your Name" formControlName="name">
+<br><br>
+<input type="text" placeholder="Enter Your email id " formControlName="email">
+<br><br>
+<input type="text" placeholder="enter password" formControlName="password">
+<br><br>
+<button (click)="getData()">Submit</button>
+<br><br>
+<button (click)="setData()">SetValue</button>
+
+</form>
+
+<h3> Name is  -{{Name}} Email is  -{{Email}} password is - {{Pass}}</h3>
