@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { NgIf } from '@angular/common';
+import { Component, NgModule } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-user',
-  imports: [],
+  imports: [FormsModule,NgIf],
   templateUrl: './user.html',
   styleUrl: './user.css',
 })
@@ -19,4 +21,13 @@ export class User {
     this.userName=params.get('name');
     })
   }
+
+
+  userDetatils:any={};
+addDetails(val :NgForm){
+ console.log(val);
+ this.userDetatils=val;
+  }
+
+  
 }

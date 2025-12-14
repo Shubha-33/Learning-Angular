@@ -1,18 +1,21 @@
+import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,NgIf],
   templateUrl:'./sign-up.html',
   styleUrl: './sign-up.css',
 })
 export class SignUp {
-  SignUp =new FormGroup({
-  name :new FormControl(),
-  password :new FormControl(),
-  email :new FormControl()
- });
+  signUpForm = new FormGroup({
+    name: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.minLength(5)),
+    email: new FormControl('', Validators.pattern(
+      '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}'
+    ))
+  });
 
 //    SignUp =new FormGroup({   // set default value 
 //   name :new FormControl('mama'),
@@ -20,22 +23,23 @@ export class SignUp {
 //   email :new FormControl('mama@123')
 //  });
 
-Name:String="";
-Email:String="";
-Pass:String="";
- getData(){
-  console.log(this.SignUp.value);
-  this.Name=this.SignUp.value.name;
-    this.Email=this.SignUp.value.email;
-  this.Pass=this.SignUp.value.password;
+ name = '';
+  email = '';
+  pass = '';
 
- }
-setData(){
-  this.SignUp.setValue({
-    name:'shubha',
-    email:'shubha@123',
-    password:'1234'
-  })
-}
+  getData() {
+    console.log(this.signUpForm.value);
 
+    this.name = this.signUpForm.value.name ?? '';
+    this.email = this.signUpForm.value.email ?? '';
+    this.pass = this.signUpForm.value.password ?? '';
+  }
+
+  setData() {
+    this.signUpForm.setValue({
+      name: 'shubha',
+      email: 'shubha@gmail.com',
+      password: '12345'
+    });
+  }
 }

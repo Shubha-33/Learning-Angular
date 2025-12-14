@@ -1,6 +1,9 @@
-<p>Sign In Please </p>
-<form [formGroup]="SignUp">
+<p>Sign In Please - using reactive group form </p>
+<form [formGroup]="signUpForm">
 <input type="text" placeholder="Enter Your Name" formControlName="name">
+  <span class="error" *ngIf="signUpForm.get('name')?.hasError('required') && signUpForm.get('name')?.touched">
+    Enter a valid name
+  </span>
 <br><br>
 <input type="text" placeholder="Enter Your email id " formControlName="email">
 <br><br>
@@ -12,4 +15,4 @@
 
 </form>
 
-<h3> Name is  -{{Name}} Email is  -{{Email}} password is - {{Pass}}</h3>
+<h3> Name is  -{{name}} Email is  -{{email}} password is - {{pass}}</h3>
